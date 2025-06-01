@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS accounts (
+    id UUID PRIMARY KEY,
+    owner_name VARCHAR(100) NOT NULL,
+    balance NUMERIC(15, 2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS users (
+    id UUID PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
